@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:orientation= "vertical"
+    android:layout_width= "match_parent"
+    android:layout_height= "match_parent"
+    tools:context= "com.stalnobcrs.gounphish.MainActivity" >
+
+    <LinearLayout
+        android:orientation= "horizontal"  android:weightSum= "10"
+        android:layout_width= "match_parent"
+        android:layout_height= "37dp" >
+
+        <EditText  android:layout_width= "259dp"  android:inputType= "textUri"
+            android:layout_height= "56dp"
+            android:id= "@+id/etURL"
+            android:hint= "http://www."
+            android:layout_weight= "9.79" >
+        </EditText >
+
+        <Button  android:text= "@string/back"
+            android:id= "@+id/bBack"
+            android:layout_width= "78dp"
+
+            android:layout_height= "match_parent" >
+        </Button >
+
+    </LinearLayout >
+
+    <LinearLayout
+        android:orientation= "horizontal"
+        android:weightSum= "8"
+        android:layout_width= "match_parent"
+        android:layout_height= "wrap_content" >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="4.73"
+            android:onClick="sendGetRequest"
+            android:text="OUTput" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="3.22"
+            android:text="@string/logout"></Button>
+
+    </LinearLayout >
+
+
+    <WebView  android:layout_width= "fill_parent"
+        android:layout_height= "match_parent"
+        android:id= "@+id/wvBrowser"
+        />
+</LinearLayout>
